@@ -9,7 +9,8 @@ defmodule Mix.Tasks.Pigcoin.Checker do
 
   def run(_args) do
     Mix.Task.run "app.start" 
-    Mix.shell.info "Greetings from the Hello Phoenix Application!"
+
+    Repo.insert(%Currency{bitcoin: 2, ether: 0.3, bitchash: 0.564})
   end
 
   # We can define other functions as needed here.
