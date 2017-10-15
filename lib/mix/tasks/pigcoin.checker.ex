@@ -1,6 +1,9 @@
 defmodule Mix.Tasks.Pigcoin.Checker do
   use Mix.Task
 
+  alias Pigcoin.Currency
+  alias Pigcoin.Repo
+
   @shortdoc "Sends a greeting to us from Hello Phoenix"
 
   @moduledoc """
@@ -10,7 +13,7 @@ defmodule Mix.Tasks.Pigcoin.Checker do
   def run(_args) do
     Mix.Task.run "app.start" 
 
-    Repo.insert(%Currency{bitcoin: 2, ether: 0.3, bitchash: 0.564})
+    Repo.insert(%Currency{bitcoin: 2.0, ether: 0.3, bitcash: 0.564})
   end
 
   # We can define other functions as needed here.
